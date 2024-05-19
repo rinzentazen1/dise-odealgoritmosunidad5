@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+  // Definimos las opciones del menú
+  int opcion;
+  char paquete1[] = "Hamburguesa clásica + Papas a la francesa + Refresco";
+  char paquete2[] = "Pizza mediana + Ensalada + Bebida";
+  char paquete3[] = "Pollo frito + Arroz + Jugo";
+  char paquete4[] = "Tacos + Frijoles + Agua fresca";
+
+  // Mostramos el menú al usuario
+  printf("\nBienvenido a Engorda facil restaurante!\n");
+  printf("--------------------------------------------\n");
+  printf("1. %s\n", paquete1);
+  printf("2. %s\n", paquete2);
+  printf("3. %s\n", paquete3);
+  printf("4. %s\n", paquete4);
+  printf("--------------------------------------------\n");
+  printf("Ingrese el número del paquete que desea: ");
+
+  // Capturamos la selección del usuario
+  scanf("%d", &opcion);
+
+  // Procesamos la selección del usuario
+  switch (opcion) {
+    case 1:
+      printf("\nHa seleccionado el paquete: %s\n", paquete1);
+      break;
+    case 2:
+      printf("\nHa seleccionado el paquete: %s\n", paquete2);
+      break;
+    case 3:
+      printf("\nHa seleccionado el paquete: %s\n", paquete3);
+      break;
+    case 4:
+      printf("\nHa seleccionado el paquete: %s\n", paquete4);
+      break;
+    default:
+      printf("\nOpción no válida. Por favor, seleccione un número del menú.\n");
+  }
+
+  return 0;
+}
