@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+  int n;
+
+  // Solicitar al usuario el valor de n
+  printf("Ingrese el valor de n: ");
+  scanf("%d", &n);
+
+  // Validar que n sea un número entero positivo
+  if (n <= 0) {
+    printf("Error: El valor de n debe ser un número entero positivo.\n");
+    return 1;
+  }
+
+  // Calcula y muestra la suma de los primeros "n" números pares
+  for (int i = 1; i <= n; i++) {
+    int suma_parcial = 0;
+    for (int j = 1; j <= i; j++) {
+      suma_parcial += 2 * j;
+    }
+    printf("Para n = %d, Suma = %d\n", i, suma_parcial);
+  }
+
+  return 0;
+}
